@@ -7,7 +7,8 @@ INSTRUCTIONS
 5. access nyo yung folder| cd ----
 6. create branch | git checkout -b "last name"
 7. access nyo yung folder file na na-clone | cd ---
-- create text file for testing
+- create text file | "name".txt for html na
+- add info dun sa txt file
 - tapos add and commit nyo
 - then push | git push -u origin "name ng branch nyo"
 - then punta kayo sa git hub dun sa pull request
