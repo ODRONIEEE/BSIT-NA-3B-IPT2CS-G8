@@ -15,3 +15,5 @@ INSTRUCTIONS
 - then dun sa compare is drop down nyo click nyo yung branch nyo yung name 
 - then may makikita kayo don yung updated file na need i pull request 
 
+!!!!IMPORTANT NOTE!!!!
+wag kalimutan affter nyong mag code or ayusin documentation saka yung code mag add kayo sa git bash and mag take screenshot for proof sa documentation, add commit then push sa gitbash then pull req sa Github ako na mag memerge
