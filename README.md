@@ -6,8 +6,8 @@ INSTRUCTIONS
 4. git clone "copy url dun sa git hub sa code"
 5. access nyo yung folder| cd ----
 6. create branch | git checkout -b "last name"
-7. access nyo yung folder file na na-clone | cd ---
-- create text file | "name".txt for html na
+7. create html file, js, css file | Odron.html, Odron.js, Odron.css
+8. create folder for Docu docs and Images for website | mkdir "Name-File"
 - add info dun sa txt file
 - tapos add and commit nyo
 - then push | git push -u origin "name ng branch nyo"
