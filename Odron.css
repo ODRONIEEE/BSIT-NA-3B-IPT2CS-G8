@@ -88,7 +88,7 @@ text-align:center;
 .script-body{
     margin-top: 0%;
     font-size: 50px;
-    color: antiquewhite;
+    color: rgb(82, 72, 59);
 }
 
 .social-media a {
@@ -128,26 +128,17 @@ text-align:center;
     justify-content: space-between;
     align-items: center;
     z-index: 100;  
+    
 }
 .link{
     color:#ddc198;
-
 }
-.image{
-    width: 350px;
-    height: 300px;
-    position: absolute;
-    left: 50px;
-    bottom: 180;
-   
-}
-
 .image img{
-    position: absolute;
-    height: 140%;
-    left: 40%;
-    bottom: 180;
-    
+   width: 350px;   
+   display: flex;
+}
+.intro{
+    color: #3E3232;
 }
 
 .btn{
