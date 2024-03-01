@@ -17,23 +17,9 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
-.hobbies{
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: 260%;
-    left: -10%;
-    transform: translateY(-50%);
-}
-#motion{
-    opacity: 40%;
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    background: #a09f69;
+.gallery img{
+    width: 300px;
+    height: 300px;
 }
 .hobby{
     width: 100%;
@@ -51,6 +37,18 @@ section {
     width: 25vw;
     animation: floatimage 4s ease-in-out infinite;
 }
+.desc{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color:antiquewhite;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
 .welcome{
     margin-top: 3%;
     font-size: 50px;
@@ -60,7 +58,7 @@ section {
 .body{
     margin-top: 0%;
     font-size: 50px;
-    color: rgb(100, 91, 71);
+    color: rgb(53, 41, 17);
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -72,6 +70,18 @@ section {
     font-weight: 700;
     font-size: 25px;
 }
+.body h5{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 22rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color:antiquewhite;
+    letter-spacing: .1rem;
+    font-weight: 900;
+    transition: .5s ease;
+}
 
 .bg{
     width: 100%;
@@ -82,10 +92,9 @@ section {
     background-attachment: fixed;
     background-image: url(Odron-File/hobby.jpeg);
 }
-.bg h6,h4{
-text-align: left;
-}
-.bg h3{
+
+
+.bg h3,h4{
 text-align:center;
 }
 
