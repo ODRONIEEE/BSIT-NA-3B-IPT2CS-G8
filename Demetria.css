@@ -138,9 +138,6 @@ header.header-sticky {
     color: #343434;
 }
 
-
-/* ======= Wraper ======== */
-
 .portfolio-container {
     max-width: 1850px;
     margin: 0 auto;
@@ -312,7 +309,6 @@ h2 strong {
 .hello-btn a:hover {
     background-color: #293b5f;
 }
-
 
 /*========= Style For About Body =========*/
 
@@ -524,10 +520,7 @@ h2 strong {
     opacity: 1;
 }
 
-
-/*======= CSS For Footer Section =========*/
-
-/*---------------- Large devices  -----------*/
+/*---------------- For Large devices  -----------*/
 
 @media (min-width: 768px) {
 
@@ -570,7 +563,7 @@ h2 strong {
         line-height: 55px;
     }
 
-    /* Home section resposive */
+    /* Home Section Responsive */
 
     #home {
         padding: 175px 0 150px 0;
@@ -590,7 +583,6 @@ h2 strong {
         order: 2;
     }
 
-    /*========= Slider Responsive =========*/
     /*========= Slider Image Responsive ========*/
 
     .home-image {
