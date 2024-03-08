@@ -1,4 +1,4 @@
-// Toggle Visibility Of Navbar When Button Clicked
+// Toggle Visibility Of Navbar (Responsive)
 
 const navToggle = document.querySelector(".navbar-toggle");
 navToggle.addEventListener("click", function () {
