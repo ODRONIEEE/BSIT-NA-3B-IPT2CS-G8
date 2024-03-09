@@ -1,3 +1,688 @@
-wala pa malagay
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+html {
+    scroll-behavior: inherit;
+}
+
+/*======== Using CSS Custom Variables =========*/
+
+body.dark {
+    --bg-color1: #0b0f19;
+    --bg-color2: #1c1e2a;
+    --color1: #FFF;
+    --color2: #DDD;
+}
+
+body:not(.dark) {
+    --bg-color1: #fbfdff;
+    --bg-color2: #f5f5f5;
+    --color1: #3e4455;
+    --color2: #000;
+}
+
+/*======= Universal CSS Properties =======*/
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color1);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--color1);
+    font-weight: 600;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: lightgoldenrodyellow;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+}
+
+h5 {
+    font-size: 1.25rem;
+    color: var(--color1);
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    color: var(--color1);
+    font-size: 150%;
+}
+
+p strong {
+    font-weight: 500;
+    color: var(--color2);
+}
 
 
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body:not(.dark) .theme-toggle .lni-night,
+body.dark .theme-toggle .lni-sun {
+    cursor: pointer;
+    color: var(--bg-color2);
+    padding: 10px 10px;
+    display: block;
+    font-size: 1.25rem;
+}
+
+body:not(.dark) .theme-toggle .lni-sun {
+    display: none;
+
+}
+
+body.dark .theme-toggle .lni-night {
+    display: none;
+}
+
+/*========= Navigation Link When Scroll Active =======*/
+
+.portfolio-navbar ul li a.active-link {
+    font-weight: 1000;
+}
+
+/*======== CSS Header Stick To Top =========*/
+
+header.header-sticky {
+    position: fixed;
+    background-color: lightcyan;
+    z-index: 2000;
+    transition: .4s;
+    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, 0.05);
+}
+
+.header-sticky .brand-name a {
+    color: #3e4455;
+}
+
+.header-sticky .navbar-toggle i {
+    color: #3e4455;
+}
+
+.header-sticky .portfolio-navbar ul li a {
+    color: #343434;
+}
+
+.portfolio-container {
+    max-width: 1850px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*========== Styling Navigation Bar ========*/
+
+header {
+    left: 0;
+    right: 0;
+    z-index: 20;
+    transition: .8s;
+    padding: 10px;
+    position: fixed;
+    background-color: var(--bg-color1);
+}
+
+header .portfolio-row.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name a {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--color1)
+}
+
+.portfolio-navbar {
+    display: none;
+}
+
+.navbar-toggle i {
+    font-size: 2rem;
+    line-height: 30px;
+    cursor: pointer;
+    color: var(--color1);
+}
+
+
+/*========== Responsive Navigation Menu =======*/
+
+.portfolio-navbar.show {
+    display: block;
+    position: absolute;
+    background-color: rgb(236, 241, 256);
+    width: 100%;
+    left: 0;
+    top: 50%;
+    padding: 10px;
+    border-top: 5px solid #000;
+    text-align: center;
+}
+
+.portfolio-navbar ul li {
+    display: block;
+}
+
+.portfolio-navbar ul li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 45px;
+}
+
+/* ========= Style For Home Section ======== */
+    #home {
+        padding-top: 100px;
+        background-color: var(--bg-color1);
+    }
+
+    .home-content {
+        align-items: center;
+    }
+
+    .home-intro {
+        margin: 3rem 0;
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+
+    .home-content h3 {
+        color: var(--bg-color1);
+        margin-bottom: 10px;
+    }
+
+/*======== CSS Main Heading =======*/
+
+h1 strong,
+h2 strong {
+    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/*=========== Style For Home Image ==========*/
+.home-image { 
+    width: 100%;
+    order: 1;
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.home-image::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: linear-gradient(11deg, #6ec1e4 0%, #54595f 100%);
+    z-index: -1;
+    transition: all .5s ease-in-out;
+    border-radius: 100% 73% 100% 72% / 99% 86% 75% 63%;
+    box-shadow: 2px 10px 0px 0px rgba(216, 19, 19, 0.16);
+}
+
+.home-image:hover {
+    transform: translateY(-10.5px);
+}
+
+.home-image img {
+    border-radius: 100% 73% 100% 72% / 99% 86% 75% 63%;
+}
+
+.home-image:hover::before {
+    filter: drop-shadow(0 0 30px rgba(130, 237, 255, 0.97));
+}
+
+/* ======== Style For About Section ======== */
+
+#about {
+    padding: 320px 0;
+    background-color: var(--bg-color2);
+}
+
+/*========= About Intro ======*/
+
+.about-intro {
+    width: 100%;
+}
+
+.about-text {
+    margin-top: 18px;
+}
+
+/*========== FB Button ===========*/
+
+.hello-btn a{
+    font-size: 14px;
+    display: inline-block;
+    margin:50px 0;
+    padding: 14px 14px;
+    color: red;
+    background-color: lightgoldenrodyellow;
+    line-height: 10px;
+    transition: all 0.3s ease-out 0s;
+}
+
+.hello-btn a:hover {
+    background-color: #293b5f;
+}
+
+/*========= Style For About Body =========*/
+
+.about-body {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.about-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    padding: 0 10px;
+    background-color: #d5d5d5;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    line-height: 40px;
+    color: #000;
+    cursor: pointer;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1rem;
+    transition: .4s;
+}
+
+.btn:not(:last-child) {
+    margin-right: 15px;
+}
+
+.btn:hover,
+.btn.active {
+    background-color: #4d63dd;
+    color: #FFF;
+}
+
+/* ========== Style For About Tab ========== */
+
+.about-tab {
+    display: none;
+}
+
+.about-tab.active {
+    display: block;
+    animation: fadeIn 1s ease;
+}
+
+.institution,
+.organization {
+    color: #78add9;
+    font-weight: 400;
+}
+
+.sub {
+    color: var(--color1);
+}
+
+.qualification-content {
+    position: relative;
+    padding: 1rem 2.1rem;
+}
+
+.qualification-content::after {
+    position: absolute;
+    content: "";
+    height: 7px;
+    width: 7px;
+    left: 8px;
+    top: 25px;
+    transform: rotate(45deg);
+    background: red;
+}
+
+.qualification-content::before {
+    content: "";
+    height: 70%;
+    width: 3px;
+    left: 10px;
+    position: absolute;
+    background-color: white;
+}
+
+/*========== Style For Quotes Section ========*/
+
+#quotes {
+    padding: 330px 0;
+    background-color: var(--bg-color1);
+}
+
+.quotes-row {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.quotes-card {
+    background: var(--bg-color2);
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 40px 35px;
+    text-align: center;
+    transition: .4s;
+}
+
+.quotes-card .icon {
+    font-size: 2.5rem;
+    transition: .4s;
+    color: var(--color1);
+}
+
+.quotes-content h6 {
+    color: var(--color1);
+    transition: .4s;
+    margin: 1rem 0;
+}
+
+.quotes-content p {
+    transition: .4s;
+    color: var(--color1);
+}
+
+
+/*========= Style For Photos Section ============*/
+
+#photos {
+    padding: 80px 0;
+    background-color: var(--bg-color2);
+}
+
+.filter-wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*========= Portfolio Gallery =========*/
+
+.portfolio-wrapper {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.portfolio-wrapper .portfolio-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.portfolio-item.development img {
+    border-radius: 5px;
+    height: 350px;
+}
+
+.portfolio-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio-item.show {
+    animation: fadeIn 4.5s ease;
+}
+
+.portfolio-item.hide {
+    display: none;
+}
+
+.portfolio-item-content {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    right: 25px;
+    bottom: 25px;
+    background-color: rgba(16, 16, 16, .5);
+    transition: .5s;
+    transform: scale(1.15);
+    opacity: 0;
+}
+
+.product-title {
+    width: 100%;
+    position: absolute;
+    bottom: -45px;
+    padding: 15px 30px;
+    opacity: 0;
+    transition: .6s;
+    text-align: center;
+    color: wheat;
+}
+
+.product-title h4,
+.product-title p {
+    color: #FFF;
+}
+
+.portfolio-item:hover .portfolio-item-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.portfolio-item:hover .product-title {
+    bottom: 30%;
+    opacity: 1;
+}
+
+/*---------------- For Large devices  -----------*/
+
+@media (min-width: 768px) {
+
+    /*======= Responsive Universal CSS Properties =======*/
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        text-align: unset;
+        color: var(--color1);
+        font-weight: 600;
+    }
+
+    /*========= Header Responsive ===========*/
+
+    header {
+        background-color: transparent;
+        position: absolut0e;
+        padding: 0 15px;
+    }
+
+    .navbar-toggle i {
+        display: none;
+    }
+
+    .portfolio-navbar {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .portfolio-navbar ul li a {
+        color: var(--color1);
+        line-height: 55px;
+    }
+
+    /* Home Section Responsive */
+
+    #home {
+        padding: 175px 0 150px 0;
+    }
+
+    .home-intro {
+        width: 60%;
+        margin: 0;
+        order: 1;
+        text-align: center;
+    }
+
+    /* Home image responsive */
+    
+    .home-image {
+        width: 40%;
+        order: 2;
+    }
+
+    /*========= Slider Image Responsive ========*/
+
+    .home-image {
+        width: 40%;
+        order: 2;
+    }
+
+    /*========= About Intro Responsive ========*/
+
+    .about-intro {
+        width: 50%;
+        padding-right: 6.25rem;
+    }
+
+    /*========= About Body Responsive ========*/
+
+    .about-body {
+        width: 50%;
+        margin-top: 0;
+        min-height: 400px;
+    }
+
+    .about-body h2 {
+        display: none;
+    }
+
+    .about-heading {
+        padding: 20px 0;
+    }
+
+    .btn {
+        padding: 0 25px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .qualification-content::after {
+        left: -2px;
+    }
+
+    .qualification-content::before {
+        left: 0;
+    }
+
+    .bar-content {
+        margin-bottom: 0;
+    }
+
+    /*========== Quotes Responsive =========*/
+
+    .quotes-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ========= Photos Responsive =========== */
+
+    .filter-wrap {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /*======= Portfolio Gallery Responsive =====*/
+
+    .portfolio-wrapper {
+        flex-direction: row;
+    }
+
+    /* ======= Footer Responsive ======== */
+
+    /*========== Theme Icon Color When Navbar Sticky ========*/
+
+    .theme-toggle {
+        background: none;
+        position: static;
+        transform: none;
+    }
+
+    body:not(.dark) .header-sticky .theme-toggle .lni-night,
+    body.dark .header-sticky .theme-toggle .lni-sun {
+        color: #3e4455;
+    }
+
+    body:not(.dark) .theme-toggle .lni-night,
+    body.dark .theme-toggle .lni-sun {
+        color: var(--color2);
+    }
+}
+
+/* ==== Footer ====== */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1%;
+    background: var(--bg-color1);
+}
+
+.footer-text {
+    font-size: 10px;
+}
