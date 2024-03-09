@@ -17,23 +17,9 @@ section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
-.hobbies{
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: 260%;
-    left: -10%;
-    transform: translateY(-50%);
-}
-#motion{
-    opacity: 40%;
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    background: #a09f69;
+.gallery img{
+    width: 260px;
+    height: 260px;
 }
 .hobby{
     width: 100%;
@@ -51,6 +37,18 @@ section {
     width: 25vw;
     animation: floatimage 4s ease-in-out infinite;
 }
+.desc{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color:antiquewhite;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
 .welcome{
     margin-top: 3%;
     font-size: 50px;
@@ -60,7 +58,7 @@ section {
 .body{
     margin-top: 0%;
     font-size: 50px;
-    color: rgb(100, 91, 71);
+    color: rgb(53, 41, 17);
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -72,7 +70,30 @@ section {
     font-weight: 700;
     font-size: 25px;
 }
-
+.body h5{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 22rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color:antiquewhite;
+    letter-spacing: .1rem;
+    font-weight: 900;
+    transition: .5s ease;
+}
+.body b{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 22rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color:antiquewhite;
+    letter-spacing: .1rem;
+    font-weight: 900;
+    transition: .5s ease;
+}
 .bg{
     width: 100%;
     height: 100vh;
@@ -82,11 +103,14 @@ section {
     background-attachment: fixed;
     background-image: url(Odron-File/hobby.jpeg);
 }
-.bg h6,h4{
-text-align: left;
-}
+
+
 .bg h3{
 text-align:center;
+}
+.bg h4{
+text-align:center;
+color: rgb(100, 74, 17);
 }
 
 
@@ -116,9 +140,66 @@ text-align:center;
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 1rem 1.5rem 1rem 0;
     transition: .5s ease;
 }
+.contain{
+    width: 500px;
+    height: 80px;
+    position: absolute;
+    top: 140%;
+    left: 70%;
+    color: bisque;
+    transform: translate(-50%,-50%);
+}
+.contain::before{
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background: #ddc198;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+.contain::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #493413;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+.clock{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(45px);
+}
+.clock span{
+    font-size: 30px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+#hrs::after{
+content: 'HOURS';
+}
+#min::after{
+content: 'MINS';
+}
+#sec::after{
+content: 'SEC';
+}   
 
 .social-media a:hover {
     background: var(--main-color);
@@ -150,6 +231,7 @@ text-align:center;
 .image img{
    width: 350px;   
    display: flex;
+   border-radius: 70%;
 }
 
 
