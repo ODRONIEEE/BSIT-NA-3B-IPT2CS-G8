@@ -1,3 +1,12 @@
+Case Study for Own Website Page profile that utilizes HTML, CSS, JavaScript.
+
+
+
+
+
+
+
+
 INSTRUCTIONS
 
 1. create folder sa desktop
@@ -18,3 +27,5 @@ INSTRUCTIONS
 
 !!!!IMPORTANT NOTE!!!!
 wag kalimutan affter nyong mag code or ayusin documentation saka yung code mag add kayo sa git bash and mag take screenshot for proof sa documentation, add commit then push sa gitbash then pull req sa Github ako na mag memerge
+
+
